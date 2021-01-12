@@ -1,0 +1,46 @@
+spring:
+  application:
+    name: lmcp-server
+  devtools:
+    restart:
+      enabled: true
+  # http设置
+  # 数据源设置
+  datasource:
+    continue-on-error: true
+    sql-script-encoding: UTF-8
+    url: jdbc:mysql://cdb-9uks4ts9.gz.tencentcdb.com:10025/liquid_metal?autoReconnect=true&useUnicode=true&characterEncoding=utf-8&rewriteBatchedStatements=true&useSSL=false&serverTimezone=GMT%2B8
+    username: root
+    password: mysql52582011
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  # jpa设置
+  jpa:
+    hibernate:
+      ddl-auto: update # 不要动这个配置
+    show-sql: true
+  # 图数据库
+  neo4j:
+    authenticatio:
+      username: neo4j
+      password: 123456
+    uri: bolt://111.230.233.89:7687
+
+# 服务器设置
+server:
+  port: 8080
+  servlet:
+    context-path: /
+    encoding:
+      charset: UTF-8
+      force: true
+  tomcat:
+    uri-encoding: UTF-8
+    max-connections: 20000
+    threads:
+      max: 1000
+
+logging:
+  file:
+    name: springboot.log
+    path: /log
