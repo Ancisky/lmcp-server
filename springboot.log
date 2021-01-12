@@ -2633,3 +2633,65 @@ javax.validation.ConstraintViolationException: checkUsernameAndPasswordString.pa
 2021-01-12 14:03:12.693  WARN 20348 --- [http-nio-8080-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [ResultVoMessage(errorNo=0, errorMsg=ÂØÜÁ†ÅÈîôËØØÔºÅ, data=null)]
 2021-01-12 14:03:16.399  WARN 20348 --- [http-nio-8080-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [ResultVoMessage(errorNo=0, errorMsg=ÂØÜÁ†ÅÈîôËØØÔºÅ, data=null)]
 2021-01-12 14:04:56.013  WARN 20348 --- [http-nio-8080-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [javax.validation.ConstraintViolationException: checkUsernameAndPasswordString.password: ÂØÜÁ†Å‰∏çËÉΩ‰∏∫Á©∫]
+2021-01-12 17:04:35.046  INFO 17932 --- [Test worker] c.kglab.lmcp.LmcpServerApplicationTests  : Starting LmcpServerApplicationTests using Java 11.0.9 on DESKTOP-OQODA92 with PID 17932 (started by Administrator in D:\Java\lmcp-server)
+2021-01-12 17:04:35.049  INFO 17932 --- [Test worker] c.kglab.lmcp.LmcpServerApplicationTests  : No active profile set, falling back to default profiles: default
+2021-01-12 17:04:35.758  INFO 17932 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-01-12 17:04:35.761  INFO 17932 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-01-12 17:04:35.825  INFO 17932 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 57 ms. Found 1 JPA repository interfaces.
+2021-01-12 17:04:35.851  INFO 17932 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-01-12 17:04:35.852  INFO 17932 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Neo4j repositories in DEFAULT mode.
+2021-01-12 17:04:35.862  INFO 17932 --- [Test worker] .RepositoryConfigurationExtensionSupport : Spring Data Neo4j - Could not safely identify store assignment for repository candidate interface com.kglab.lmcp.repository.UserDao. If you want this repository to be a Neo4j repository, consider annotating your entities with one of these annotations: org.springframework.data.neo4j.core.schema.Node, org.springframework.data.neo4j.core.schema.RelationshipProperties, org.springframework.data.annotation.Persistent (preferred), or consider extending one of the following types with your repository: org.springframework.data.neo4j.repository.Neo4jRepository.
+2021-01-12 17:04:35.862  INFO 17932 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 Neo4j repository interfaces.
+2021-01-12 17:04:36.308  INFO 17932 --- [Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-01-12 17:04:36.356  INFO 17932 --- [Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2021-01-12 17:04:36.503  INFO 17932 --- [Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-01-12 17:04:36.606  INFO 17932 --- [Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-01-12 17:04:37.499  INFO 17932 --- [Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-01-12 17:04:37.524  INFO 17932 --- [Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2021-01-12 17:04:38.252  INFO 17932 --- [Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-01-12 17:04:38.259  INFO 17932 --- [Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-01-12 17:04:39.002  WARN 17932 --- [Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-01-12 17:04:39.189  INFO 17932 --- [Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-12 17:04:39.560  INFO 17932 --- [Test worker] org.neo4j.driver.Driver                  : Direct driver instance 1138780957 created for server address 111.230.233.89:7687
+2021-01-12 17:04:39.736  INFO 17932 --- [Test worker] c.kglab.lmcp.LmcpServerApplicationTests  : Started LmcpServerApplicationTests in 4.952 seconds (JVM running for 6.133)
+2021-01-12 17:04:39.846  INFO 17932 --- [SpringContextShutdownHook] org.neo4j.driver.Driver                  : Closing driver instance 1138780957
+2021-01-12 17:04:40.056  INFO 17932 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-01-12 17:04:40.057  INFO 17932 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-01-12 17:04:40.060  INFO 17932 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-01-12 17:04:40.370  INFO 17932 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-01-12 17:04:59.680  INFO 20292 --- [restartedMain] com.kglab.lmcp.LmcpServerApplication     : Starting LmcpServerApplication using Java 11.0.9 on DESKTOP-OQODA92 with PID 20292 (D:\Java\lmcp-server\build\classes\java\main started by Administrator in D:\Java\lmcp-server)
+2021-01-12 17:04:59.682  INFO 20292 --- [restartedMain] com.kglab.lmcp.LmcpServerApplication     : No active profile set, falling back to default profiles: default
+2021-01-12 17:04:59.711  INFO 20292 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-01-12 17:04:59.713  INFO 20292 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-01-12 17:05:00.140  INFO 20292 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-01-12 17:05:00.141  INFO 20292 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-01-12 17:05:00.180  INFO 20292 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 33 ms. Found 1 JPA repository interfaces.
+2021-01-12 17:05:00.193  INFO 20292 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-01-12 17:05:00.194  INFO 20292 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Neo4j repositories in DEFAULT mode.
+2021-01-12 17:05:00.201  INFO 20292 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Neo4j - Could not safely identify store assignment for repository candidate interface com.kglab.lmcp.repository.UserDao. If you want this repository to be a Neo4j repository, consider annotating your entities with one of these annotations: org.springframework.data.neo4j.core.schema.Node, org.springframework.data.neo4j.core.schema.RelationshipProperties, org.springframework.data.annotation.Persistent (preferred), or consider extending one of the following types with your repository: org.springframework.data.neo4j.repository.Neo4jRepository.
+2021-01-12 17:05:00.201  INFO 20292 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 Neo4j repository interfaces.
+2021-01-12 17:05:00.639  INFO 20292 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-01-12 17:05:00.647  INFO 20292 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-01-12 17:05:00.647  INFO 20292 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-01-12 17:05:00.722  INFO 20292 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-01-12 17:05:00.722  INFO 20292 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1008 ms
+2021-01-12 17:05:00.823  INFO 20292 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-01-12 17:05:00.851  INFO 20292 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.25.Final
+2021-01-12 17:05:00.927  INFO 20292 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-01-12 17:05:00.986  INFO 20292 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-01-12 17:05:01.821  INFO 20292 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-01-12 17:05:01.832  INFO 20292 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2021-01-12 17:05:02.364  INFO 20292 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-01-12 17:05:02.370  INFO 20292 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-01-12 17:05:02.381  INFO 20292 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-01-12 17:05:02.684  WARN 20292 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-01-12 17:05:02.766  INFO 20292 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-12 17:05:02.919  INFO 20292 --- [restartedMain] org.neo4j.driver.Driver                  : Direct driver instance 1594609645 created for server address 111.230.233.89:7687
+2021-01-12 17:05:03.030  INFO 20292 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-01-12 17:05:03.036  INFO 20292 --- [restartedMain] com.kglab.lmcp.LmcpServerApplication     : Started LmcpServerApplication in 3.674 seconds (JVM running for 4.11)
+2021-01-12 17:05:38.876  INFO 20292 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-01-12 17:05:38.877  INFO 20292 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-01-12 17:05:38.878  INFO 20292 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-01-12 17:05:39.351  WARN 20292 --- [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [ResultVoMessage(errorNo=0, errorMsg=√‹¬Î¥ÌŒÛ£°, data=null)]
+2021-01-12 17:05:44.575  WARN 20292 --- [http-nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [ResultVoMessage(errorNo=1, errorMsg=µ«¬Ω≥…π¶£°, data=null)]
+2021-01-12 17:10:46.677  WARN 20292 --- [http-nio-8080-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [ResultVoMessage(errorNo=1, errorMsg=µ«¬Ω≥…π¶£°, data=null)]
