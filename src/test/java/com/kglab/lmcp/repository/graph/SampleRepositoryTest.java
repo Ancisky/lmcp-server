@@ -24,9 +24,9 @@ public class SampleRepositoryTest{
 
     @Test
     public void test1(){
-        ElementNode e = ElementNode.builder().elName("Mg").build();
+        ElementNode e = ElementNode.builder().elName("Cu").build();
         HasElRelation rel = HasElRelation.builder()
-                .percent(0.89f)
+                .percent(0.02f)
                 .targetNode(e)
                 .build();
         SampleNode s = SampleNode.builder()
