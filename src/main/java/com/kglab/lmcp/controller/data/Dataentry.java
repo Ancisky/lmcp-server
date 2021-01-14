@@ -18,7 +18,7 @@ public class Dataentry extends BaseAction {
 
 
     @RequestMapping("entry")
-    public void dataEntry(@RequestParam(required = false) String id) {
+    public void dataEntry(@RequestBody JSONObject json, @RequestParam String id) {
         rebut("ok",id);
     }
 }
