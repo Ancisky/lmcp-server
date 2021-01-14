@@ -52,7 +52,7 @@ public class GlobalExceptionHandler {
 	 */
 	@ExceptionHandler(value= ResultVoMessage.class)
 	@ResponseBody
-	private ResultVo exceptionHandler2(ResultVoMessage e) {
+	private ResultVo exceptionHandler(ResultVoMessage e) {
 		ResultVo rv = ResultVo.builder()
 				.no(e.getErrorNo())
 				.msg(e.getErrorMsg())
@@ -69,7 +69,7 @@ public class GlobalExceptionHandler {
 	 */
 	@ExceptionHandler(value= ConstraintViolationException.class)
 	@ResponseBody
-	private ResultVo exceptionHandler2(ConstraintViolationException e) {
+	private ResultVo exceptionHandler(ConstraintViolationException e) {
 		Set <ConstraintViolation<?>> violations = e.getConstraintViolations();
 		ResultVo rv = ResultVo.builder()
 				.no(StatusCode.REBUT)

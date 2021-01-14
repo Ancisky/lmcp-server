@@ -2,7 +2,11 @@ package com.kglab.lmcp.entity.vo;
 
 import lombok.Builder;
 import lombok.Data;
-
+/**
+ * TODO 全局通用响应数据类型（controller中返回的对象类型）
+ * @author sc
+ * @date 2021/1/14
+ */
 @Data
 @Builder
 public class ResultVo {

@@ -1,4 +1,4 @@
-package com.kglab.lmcp.entity.po;
+package com.kglab.lmcp.entity.table;
 
 import lombok.Data;
 

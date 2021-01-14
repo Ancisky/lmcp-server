@@ -1,12 +1,10 @@
-package com.kglab.lmcp.repository;
+package com.kglab.lmcp.repository.graph;
 
-import com.kglab.lmcp.LmcpServerApplication;
+import com.kglab.lmcp.repository.table.UserDao;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-
-import static org.junit.Assert.*;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest
@@ -39,4 +37,5 @@ public class UserDaoTest {
     public void queryUserPassowrd() {
         System.out.println(userDao.queryUserPassowrd("sc").toString());
     }
+
 }

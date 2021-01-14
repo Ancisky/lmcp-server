@@ -1,15 +1,16 @@
-package com.kglab.lmcp.repository;
+package com.kglab.lmcp.repository.table;
 
-import com.kglab.lmcp.entity.po.User;
+import com.kglab.lmcp.entity.table.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.CrudRepository;
-import org.springframework.data.repository.PagingAndSortingRepository;
-import org.springframework.data.repository.Repository;
 
 import java.util.List;
-
+/**
+ * TODO 用户表数据操作接口
+ * @author sc
+ * @date 2021/1/14
+ */
 public interface UserDao extends JpaRepository<User,Integer>, JpaSpecificationExecutor<User> {
 
     // 基于Repository方法名称必须要遵循驼峰式命名规则，findBy（关键字）+属性名称（首字母大写）+查询条件（首字母大写）

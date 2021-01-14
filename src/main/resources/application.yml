@@ -4,7 +4,6 @@ spring:
   devtools:
     restart:
       enabled: true
-  # http设置
   # 数据源设置
   datasource:
     continue-on-error: true
@@ -13,7 +12,6 @@ spring:
     username: root
     password: mysql52582011
     driver-class-name: com.mysql.cj.jdbc.Driver
-
   # jpa设置
   jpa:
     hibernate:
@@ -21,7 +19,7 @@ spring:
     show-sql: true
   # 图数据库
   neo4j:
-    authenticatio:
+    authentication:
       username: neo4j
       password: 123456
     uri: bolt://111.230.233.89:7687
@@ -44,3 +42,8 @@ logging:
   file:
     name: springboot.log
     path: /log
+  level:
+    org:
+      springframework:
+        data:
+          neo4j: DEBUG

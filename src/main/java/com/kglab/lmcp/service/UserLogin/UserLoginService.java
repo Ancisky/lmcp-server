@@ -1,20 +1,21 @@
 package com.kglab.lmcp.service.UserLogin;
 
 import com.kglab.lmcp.constant.StatusCode;
-import com.kglab.lmcp.entity.po.User;
+import com.kglab.lmcp.entity.table.User;
 import com.kglab.lmcp.global.handle.exception.result.ResultVoMessage;
-import com.kglab.lmcp.global.handle.exception.result.SuccessResultMessage;
-import com.kglab.lmcp.repository.UserDao;
-import lombok.AccessLevel;
-import lombok.Setter;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.kglab.lmcp.repository.table.UserDao;
+import com.kglab.lmcp.service.BaseService;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
-
+/**
+ * TODO 用户登陆服务接口
+ * @author sc
+ * @date 2021/1/14
+ */
 @Service
 @Transactional
-public class UserLoginService {
+public class UserLoginService extends BaseService {
 
     final UserDao userDao;
 
@@ -31,11 +32,11 @@ public class UserLoginService {
    public void validateLoginForm (String username, String password){
        User u = userDao.findByUsername(username);
        if(u==null){
-           throw new ResultVoMessage(StatusCode.FAIL,"用户不存在！");
+           fail("用户不存在");
        }else if(u.getPassword().equalsIgnoreCase(password)){
-           throw new ResultVoMessage(StatusCode.SUCCESS,"登陆成功！");
+           success("登陆成功！");
        }else{
-           throw new ResultVoMessage(StatusCode.FAIL,"密码错误！");
+           fail("密码错误！");
        }
    }
 }
