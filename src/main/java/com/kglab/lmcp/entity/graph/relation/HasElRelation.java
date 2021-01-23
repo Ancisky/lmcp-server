@@ -3,6 +3,7 @@ package com.kglab.lmcp.entity.graph.relation;
 
 import com.kglab.lmcp.entity.graph.NodeEntity;
 import com.kglab.lmcp.entity.graph.RelationShipEntity;
+import com.kglab.lmcp.entity.graph.nodes.ElementNode;
 import lombok.Builder;
 import lombok.Data;
 import org.springframework.data.neo4j.core.schema.*;
@@ -22,5 +23,5 @@ public class HasElRelation implements RelationShipEntity {
     private final float percent;
 
     @TargetNode
-    private final NodeEntity targetNode;
+    private final ElementNode targetNode;
 }
