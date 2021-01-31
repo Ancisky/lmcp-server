@@ -13,6 +13,4 @@ import org.springframework.data.neo4j.repository.Neo4jRepository;
  * @date 2021/1/13
  */
 public interface SampleRepository extends Neo4jRepository< SampleNode, String> {
-
-
 }

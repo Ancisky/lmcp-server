@@ -8,6 +8,9 @@ import lombok.Builder;
 import lombok.Data;
 import org.springframework.data.neo4j.core.schema.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * TODO  关系：<样品>包含<元素>$
  *
@@ -24,4 +27,10 @@ public class HasElRelation implements RelationShipEntity {
 
     @TargetNode
     private final ElementNode targetNode;
+
+    public List<HasElRelation> toList(){
+        List<HasElRelation> list = new ArrayList<HasElRelation>();
+        list.add(this);
+        return list;
+    }
 }

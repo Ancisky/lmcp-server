@@ -4,6 +4,8 @@ import com.kglab.lmcp.constant.StatusCode;
 import com.kglab.lmcp.entity.vo.ResultVo;
 import com.kglab.lmcp.global.handle.exception.result.ResultVoMessage;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.validation.FieldError;
+import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -11,6 +13,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.ConstraintViolation;
 import javax.validation.ConstraintViolationException;
+import java.util.ArrayList;
 import java.util.Set;
 
 /**
@@ -61,13 +64,13 @@ public class GlobalExceptionHandler {
 	}
 
 	/**
-	 * 请求参数验证失败异常，ConstraintViolationException
+	 * 请求@Validated 参数验证失败异常，ConstraintViolationException
 	 * @param e
 	 * @return com.kglab.lmcp.entity.vo.ResultVo
 	 * @author sc
 	 * @date 2021/1/12
 	 */
-	@ExceptionHandler(value= ConstraintViolationException.class)
+	@ExceptionHandler(value= {ConstraintViolationException.class})
 	@ResponseBody
 	private ResultVo exceptionHandler(ConstraintViolationException e) {
 		Set <ConstraintViolation<?>> violations = e.getConstraintViolations();
@@ -76,5 +79,25 @@ public class GlobalExceptionHandler {
 				.msg(violations.iterator().next().getMessage())
 				.build();
 		return rv;
+	}
+
+	/**
+	 * 请求@valid 参数验证失败异常，ConstraintViolationException
+	 * @param e
+	 * @return com.kglab.lmcp.entity.vo.ResultVo
+	 * @author sc
+	 * @date 2021/1/12
+	 */
+	@ExceptionHandler(value= {MethodArgumentNotValidException.class})
+	@ResponseBody
+	private ResultVo exceptionHandler(MethodArgumentNotValidException e) throws MethodArgumentNotValidException {
+		for (FieldError error : e.getBindingResult().getFieldErrors()) {
+			ResultVo rv = ResultVo.builder()
+					.no(StatusCode.REBUT)
+					.msg(error.getDefaultMessage())
+					.build();
+			return rv;
+		}
+		throw e;
 	}
 }

@@ -22,7 +22,7 @@ public class PropertyValueNode implements NodeEntity {
     @GeneratedValue(UUIDStringGenerator.class)
     private final String uuid;
     /** 属性值 **/
-    private final double propValue;
+    private final float propValue;
 }
 
 

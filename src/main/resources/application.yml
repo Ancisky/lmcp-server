@@ -26,7 +26,7 @@ spring:
 
 # 服务器设置
 server:
-  port: 7071
+  port: 8080
   servlet:
     context-path: /
     encoding:
