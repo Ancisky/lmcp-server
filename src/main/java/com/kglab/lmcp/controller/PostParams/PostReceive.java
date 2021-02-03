@@ -5,7 +5,6 @@ import com.kglab.lmcp.entity.graph.nodes.PropertyValueNode;
 import com.kglab.lmcp.entity.graph.nodes.SampleNode;
 import com.kglab.lmcp.entity.graph.relation.AttrIsRelation;
 import com.kglab.lmcp.entity.graph.relation.HasElRelation;
-import com.kglab.lmcp.repository.graph.SaveGarphData;
 import com.kglab.lmcp.repository.graph.SampleRepository;
 import com.alibaba.fastjson.JSONObject;
 import com.kglab.lmcp.controller.BaseAction;
@@ -46,7 +45,7 @@ public class PostReceive extends BaseAction {
                 continue;
             }
             //System.out.println(Double.parseDouble(postJson.getString(key)));
-            AttrValue(sample, key, Double.parseDouble(postJson.getString(key)));
+            AttrValue(sample, key, Float.parseFloat(postJson.getString(key)));
         }
 
         return postJson.toString();
@@ -55,7 +54,7 @@ public class PostReceive extends BaseAction {
 
     @Autowired SampleRepository sampleRepository;
 
-    public void EleProperties(String EleName, double Percent, String Code) {
+    public void EleProperties(String EleName, float Percent, String Code) {
         ElementNode e = ElementNode.builder().elName(EleName).build();
         HasElRelation rel = HasElRelation.builder()
                 .percent(Percent)
@@ -68,7 +67,7 @@ public class PostReceive extends BaseAction {
         sampleRepository.save(s);
     }
 
-    public void AttrValue(String Sample, String AttrName, double Value) {
+    public void AttrValue(String Sample, String AttrName, float Value) {
         PropertyValueNode val = PropertyValueNode.builder()
                 .propValue(Value)
                 .build();
@@ -87,7 +86,7 @@ public class PostReceive extends BaseAction {
     public void AttrValueTest() {
         String Sample = "s-0002";
         String AttrName = "Time (s)";
-        double Value = 3.0;
+        float Value = 3;
         PropertyValueNode val = PropertyValueNode.builder()
                 .propValue(Value)
                 .build();
