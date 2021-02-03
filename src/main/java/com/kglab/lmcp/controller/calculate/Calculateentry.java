@@ -20,7 +20,7 @@ public class Calculateentry extends BaseAction {
     }
 
     @RequestMapping("entry")
-    public void dataEntry(@Valid @RequestBody Calculateentry json){
+    public void dataEntry(@Valid @RequestBody JSONObject json){
         calculateentryService.calculate(json);
     }
 

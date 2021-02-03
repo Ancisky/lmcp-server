@@ -48,3 +48,4 @@ logging:
       springframework:
         data:
           neo4j: DEBUG
+
