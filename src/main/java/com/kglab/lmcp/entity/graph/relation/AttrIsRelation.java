@@ -1,10 +1,9 @@
 package com.kglab.lmcp.entity.graph.relation;
 
 
-import com.kglab.lmcp.entity.graph.NodeEntity;
+
 import com.kglab.lmcp.entity.graph.RelationShipEntity;
 import com.kglab.lmcp.entity.graph.nodes.PropertyValueNode;
-import com.kglab.lmcp.entity.graph.nodes.ValueNode;
 import lombok.Builder;
 import lombok.Data;
 import org.springframework.data.neo4j.core.schema.*;

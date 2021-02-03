@@ -38,6 +38,7 @@ server:
     threads:
       max: 1000
 
+
 logging:
   file:
     name: springboot.log
@@ -47,3 +48,4 @@ logging:
       springframework:
         data:
           neo4j: DEBUG
+

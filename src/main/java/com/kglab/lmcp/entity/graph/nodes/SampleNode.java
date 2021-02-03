@@ -1,14 +1,13 @@
 package com.kglab.lmcp.entity.graph.nodes;
 
 import com.kglab.lmcp.entity.graph.NodeEntity;
-import com.kglab.lmcp.entity.graph.RelationShipEntity;
-import com.kglab.lmcp.entity.graph.relation.AllRelation;
+
 import com.kglab.lmcp.entity.graph.relation.AttrIsRelation;
 import com.kglab.lmcp.entity.graph.relation.HasElRelation;
 import lombok.Builder;
 import lombok.Data;
 import org.springframework.data.neo4j.core.schema.*;
-import org.springframework.data.neo4j.core.support.UUIDStringGenerator;
+
 
 import java.util.List;
 

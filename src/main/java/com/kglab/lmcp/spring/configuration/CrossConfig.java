@@ -1,4 +1,4 @@
-package com.kglab.lmcp.SpringConfiguration;
+package com.kglab.lmcp.spring.configuration;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
