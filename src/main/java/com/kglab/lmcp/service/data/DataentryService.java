@@ -208,6 +208,6 @@ public class DataentryService extends BaseService {
 
         SampleNode insertEntity = sampleRepository.save(sampleNode);
 
-        fail("录入成功！");
+        success("录入成功！");
     }
 }
