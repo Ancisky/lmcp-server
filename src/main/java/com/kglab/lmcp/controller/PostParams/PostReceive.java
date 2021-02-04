@@ -24,8 +24,6 @@ import javax.swing.*;
 import java.util.List;
 import java.util.Set;
 
-@RunWith(SpringJUnit4ClassRunner.class)
-@SpringBootTest
 @RestController
 @Validated
 @RequestMapping(value = "/test")
