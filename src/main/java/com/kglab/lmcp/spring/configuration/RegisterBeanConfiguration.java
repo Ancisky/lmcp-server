@@ -16,7 +16,7 @@ import java.nio.charset.StandardCharsets;
  * @date 2021/2/4
  */
 @Configuration
-public class RegisterBeenConfiguration {
+public class RegisterBeanConfiguration {
 
 
     @Autowired

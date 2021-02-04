@@ -24,7 +24,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-@Transactional(noRollbackFor = SuccessResultMessage.class)
 public class DataentryService extends BaseService {
 
     final SampleRepository sampleRepository;
@@ -209,6 +208,6 @@ public class DataentryService extends BaseService {
 
         SampleNode insertEntity = sampleRepository.save(sampleNode);
 
-        success("录入成功！");
+        fail("录入成功！");
     }
 }

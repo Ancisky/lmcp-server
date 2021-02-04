@@ -16,7 +16,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Service
-@Transactional(noRollbackFor = SuccessResultMessage.class)
 public class CalculateentryService extends BaseService {
 
     final SampleRepository sampleRepository;
