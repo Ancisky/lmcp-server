@@ -21,16 +21,19 @@ public class ReceiveTime {
     private LastScanTime lastScanTime;
 
     @RequestMapping(value = "/timepush",method = RequestMethod.POST,produces = "application/json;charset=UTF-8")
+    //接收采集端传来的最后扫描时间数据，以主机名和扫描路径作为索引
     public void GetTime(@RequestBody JSONObject timejosn){
         Computer computer = new Computer();
         computer.setComputer(timejosn.getString("computername"));
         computer.setLastdire(timejosn.getString("lastdire"));
         computer.setLasttime(timejosn.getString("lasttime"));
         List<Computer> queryresult = lastScanTime.findByComputerAndLastdire(timejosn.getString("computername"),timejosn.getString("lastdire"));
+        //没有数据建立数据
         if(queryresult.size() == 0){
             lastScanTime.save(computer);
             System.out.println("Has no time.");
         }
+        //有数据则更新数据
         else {
             computer.setUid(queryresult.get(0).getUid());
             lastScanTime.save(computer);

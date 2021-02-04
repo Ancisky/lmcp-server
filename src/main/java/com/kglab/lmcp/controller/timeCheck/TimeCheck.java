@@ -21,11 +21,12 @@ public class TimeCheck extends BaseAction {
 
 
     @RequestMapping(value = "/timecheck",method = RequestMethod.POST,produces = "application/json;charset=UTF-8")
+    //和数据库校对扫描时间，将结果返回采集端
     public JSONObject TimeSend(@RequestBody JSONObject checkMessage) throws SQLException {
 
         System.out.println("Computer Name: "+checkMessage.getString("computername"));
         System.out.println("Scan Dire: "+checkMessage.getString("lastdire"));
-
+        //从数据库中查询到的数据，返回给采集端
         JSONObject returnJson = GetParaFromDB(checkMessage.getString("computername"), checkMessage.getString("lastdire"));
         System.out.println(returnJson);
 
@@ -54,19 +55,4 @@ public class TimeCheck extends BaseAction {
         jsOB.put("lasttime",searchResult.get(0).getLasttime());
         return jsOB;
     }
-
-    @Test
-    public void GetParaFromDBTest(){
-        String Computer = "desktop-1234";
-        String Dire = "D:\\项目测试\\Wpf窗口";
-        //System.out.println(lastScanTime.findByComputer(Computer));
-        //查询数据，按照主机名和路径查询
-
-        List<Computer> searchResult = lastScanTime.findByComputer(Computer);
-        for(int r = 0; r<searchResult.size();r++){
-            System.out.println(searchResult.get(r));
-        }
-    }
-
-
 }
