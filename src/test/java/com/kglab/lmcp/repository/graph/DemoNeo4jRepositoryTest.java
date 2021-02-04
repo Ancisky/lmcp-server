@@ -46,6 +46,7 @@ public class DemoNeo4jRepositoryTest {
     }
     @org.junit.Test
     public void test2(){
+      List<MovieEntity> l =  demoRepository.findAll();
         System.out.println("测试");
     }
 }

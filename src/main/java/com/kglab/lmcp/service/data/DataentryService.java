@@ -24,7 +24,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-@Transactional(noRollbackFor = SuccessResultMessage.class)
 public class DataentryService extends BaseService {
 
     final SampleRepository sampleRepository;

@@ -15,8 +15,6 @@ import org.springframework.transaction.annotation.Transactional;
  * @date 2021/1/14
  */
 @Service
-@Transactional(noRollbackFor = SuccessResultMessage.class)
-
 public class UserLoginService extends BaseService {
 
     final UserDao userDao;
