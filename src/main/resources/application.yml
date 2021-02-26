@@ -8,7 +8,7 @@ spring:
   datasource:
     continue-on-error: true
     sql-script-encoding: UTF-8
-    url: jdbc:mysql://cdb-9uks4ts9.gz.tencentcdb.com:10025/liquid_metal?autoReconnect=true&useUnicode=true&characterEncoding=utf-8&rewriteBatchedStatements=true&useSSL=false&serverTimezone=GMT%2B8
+    url: jdbc:mysql://amorsc.top:3306/liquid_metal?autoReconnect=true&useUnicode=true&characterEncoding=utf-8&rewriteBatchedStatements=true&useSSL=false&serverTimezone=GMT%2B8
     username: root
     password: mysql52582011
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -22,11 +22,11 @@ spring:
     authentication:
       username: neo4j
       password: 123456
-    uri: bolt://111.230.233.89:7687
+    uri: bolt://amorsc.top:7687
 
 # 服务器设置
 server:
-  port: 8080
+  port: 7071
   servlet:
     context-path: /
     encoding:
@@ -41,11 +41,14 @@ server:
 
 logging:
   file:
-    name: springboot.log
-    path: /log
+    name: ./log/springboot.log
   level:
     org:
       springframework:
         data:
           neo4j: DEBUG
 
+user:
+  setting:
+    CALCULATE_SERVICE:
+      BASE_URL: http://genhmzk8kr.54http.tech/cal/

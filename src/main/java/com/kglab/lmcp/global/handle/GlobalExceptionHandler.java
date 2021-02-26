@@ -39,7 +39,7 @@ public class GlobalExceptionHandler {
 	@ExceptionHandler(value=Exception.class) 
 	@ResponseBody
 	private ResultVo exceptionHandler(HttpServletRequest request, Exception e) {
-		ResultVo rv = new ResultVo(DEFAULT,e.getMessage());
+		ResultVo rv = new ResultVo(DEFAULT,e.getMessage()==null?"系统异常":e.getMessage());
 		if(! (e instanceof ResultVoMessage))
 			log.error("全局拦截异常", e);
 		return rv;

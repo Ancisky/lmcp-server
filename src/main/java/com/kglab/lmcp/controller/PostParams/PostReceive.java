@@ -24,12 +24,14 @@ import javax.swing.*;
 import java.util.List;
 import java.util.Set;
 
+@RunWith(SpringJUnit4ClassRunner.class)
+@SpringBootTest
 @RestController
 @Validated
 @RequestMapping(value = "/test")
 public class PostReceive extends BaseAction {
 
-    @RequestMapping(value = "/params", method = RequestMethod.POST, produces = "application/json;charset=UTF-8")
+    @RequestMapping(value = "/params",   produces = "application/json;charset=UTF-8")
     public String paraGet(@RequestBody JSONObject postJson) {
         System.out.println(postJson.toString());
 

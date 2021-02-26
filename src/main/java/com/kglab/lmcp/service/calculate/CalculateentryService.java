@@ -6,7 +6,9 @@ import com.alibaba.fastjson.JSONObject;
 import com.kglab.lmcp.global.handle.exception.result.SuccessResultMessage;
 import com.kglab.lmcp.repository.graph.SampleRepository;
 import com.kglab.lmcp.service.BaseService;
+import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.client.RestTemplate;
@@ -26,9 +28,13 @@ public class CalculateentryService extends BaseService {
         this.restTemplate = restTemplate;
     }
 
-    public void calculate(JSONObject data){
-        String url = "http://genhmzk8kr.54http.tech/cal/compute/";
+    @Value("${user.setting.CALCULATE_SERVICE.BASE_URL}")
+    private String CAL_BASE_URL;
+    private String COMPUTE_API = "compute/";
 
+
+    public void calculate(JSONObject data){
+        String url = CAL_BASE_URL + COMPUTE_API;
         JSONObject res = new JSONObject();
         JSONObject dataCget = getPost(data,"电导率");
         JSONObject dataPget = getPost(data,"密度");
@@ -57,7 +63,7 @@ public class CalculateentryService extends BaseService {
         success("查询成功",res);
     }
 
-    public JSONObject getPost(@Valid JSONObject json, String prop){
+    public JSONObject getPost(JSONObject json, String prop){
         JSONObject dataRes = new JSONObject();
         float v_ga = json.getFloat("v_ga");
         float v_in = json.getFloat("v_in");
