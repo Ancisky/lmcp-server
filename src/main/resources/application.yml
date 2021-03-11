@@ -51,4 +51,4 @@ logging:
 user:
   setting:
     CALCULATE_SERVICE:
-      BASE_URL: http://genhmzk8kr.54http.tech/cal/
+      BASE_URL: http://127.0.0.1/cal/
